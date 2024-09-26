@@ -3,9 +3,11 @@ import {hydrogen} from '@shopify/hydrogen/vite';
 import {oxygen} from '@shopify/mini-oxygen/vite';
 import {vitePlugin as remix} from '@remix-run/dev';
 import tsconfigPaths from 'vite-tsconfig-paths';
+import {remixDevTools} from 'remix-development-tools';
 
 export default defineConfig({
   plugins: [
+    remixDevTools(),
     hydrogen(),
     oxygen(),
     remix({
